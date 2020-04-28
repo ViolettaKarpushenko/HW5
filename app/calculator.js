@@ -5,52 +5,46 @@
  */
 class Calculator {
   /**
-  *Creates an instance of Calculator.
-  * @memberof Calculator
-  */
+    *Creates an instance of Calculator.
+    * @memberof Calculator
+    */
   constructor() {
   };
 
 
   /**
-   *
-   *
-   * @param {Array<Number>} arrayOfNumbers array of numbers to go throgh
-   * @return {Number} multiply of numbers
-   * @memberof Calculator
-   */
-  multiplyNumbers(arrayOfNumbers) {
-    if (Array.isArray(arrayOfNumbers)) {
-      let multiplyResult=1;
-      for (let i=0; i<arrayOfNumbers.length; i++) {
-        multiplyResult = multiplyResult * arrayOfNumbers[i];
-      }
-      return multiplyResult;
+     *
+     *
+     * @param {Array<Number>} arrayOfNumbers array of numbers to go throgh
+     * @return {Number} return result of multiply of all numbers in array
+     * @memberof Calculator
+     */
+  static multiplyNumbers(arrayOfNumbers) {
+    if (Array.isArray(arrayOfNumbers) &&
+      arrayOfNumbers.every((item) => typeof item === 'number')) {
+      // eslint-disable-next-line max-len
+      return arrayOfNumbers.reduce((commulativeValue, currentArrayValue) => commulativeValue * currentArrayValue);
     } else {
       throw new Error(`[${arrayOfNumbers}] is not an array of "Numbers"`);
     }
   };
 
   /**
-   *
-   *
-   * @param {Array<Number>} arrayOfNumbers array of numbers to go throgh
-   * @return {Number} addition of numbers
-   * @memberof Calculator
-   */
-  addNumbers(arrayOfNumbers) {
-    if (Array.isArray(arrayOfNumbers)) {
-      let addResult=1;
-      for (let i=0; i<arrayOfNumbers.length; i++) {
-        addResult = addResult + arrayOfNumbers[i];
-      }
-      console.log(`addResult: ${addResult}`);
-
- //     return addResult;
+     *
+     *
+     * @param {Array<Number>} arrayOfNumbers array of numbers to go throgh
+     * @return {Number} return sum of all numbers in array
+     * @memberof Calculator
+     */
+  static sumNumbers(arrayOfNumbers) {
+    if (Array.isArray(arrayOfNumbers) &&
+      arrayOfNumbers.every((item) => typeof item === 'number')) {
+      // eslint-disable-next-line max-len
+      return arrayOfNumbers.reduce((commulativeValue, currentArrayValue) => commulativeValue + currentArrayValue);
     } else {
       throw new Error(`[${arrayOfNumbers}] is not an array of "Numbers"`);
     }
   }
 }
 
-module.export = Calculator;
+module.exports = Calculator;
