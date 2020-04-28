@@ -19,6 +19,14 @@
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
-    "mocha": "^7.1.2"
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1"
+  },
+  "nyc": {
+    "reporter": "html",
+    "check-coverage": true,
+    "branches": 70,
+    "lines": 70,
+    "functions": 70
   }
 }
