@@ -15,7 +15,5 @@
         "sourceType": "module"
     },
     "rules": {
-        //to avoid 'LF' but found 'CRLF'
-        "linebreak-style": 0
     }
 }

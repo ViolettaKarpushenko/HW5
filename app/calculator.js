@@ -19,7 +19,7 @@ class Calculator {
      * @return {Number} return result of multiply of all numbers in array
      * @memberof Calculator
      */
-  static multiplyNumbers(arrayOfNumbers) {
+  static multiplyNumbers(...arrayOfNumbers) {
     if (Array.isArray(arrayOfNumbers) &&
       arrayOfNumbers.every((item) => typeof item === 'number')) {
       // eslint-disable-next-line max-len
@@ -36,7 +36,7 @@ class Calculator {
      * @return {Number} return sum of all numbers in array
      * @memberof Calculator
      */
-  static sumNumbers(arrayOfNumbers) {
+  static sumNumbers(...arrayOfNumbers) {
     if (Array.isArray(arrayOfNumbers) &&
       arrayOfNumbers.every((item) => typeof item === 'number')) {
       // eslint-disable-next-line max-len
